@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class LineTests {
-    /*
+
     private static Line line1 = new Line(5, 4, -17);
     private static Line line2 = new Line(-25, 40, 30);
     private static Line line3 = new Line(-10, -8, 20);
@@ -39,5 +39,5 @@ public class LineTests {
 
     }
 
-     */
+
 }
