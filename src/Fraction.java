@@ -10,14 +10,14 @@ public class Fraction {
       public Fraction(int numerator, int denominator){
           this.numerator=numerator;
           this.denominator=denominator;
-          if(denominator<0) {
-              numerator -= 2 * (numerator);
-              denominator += 2 * denominator;
+          if(this.denominator<0) {
+              this.numerator -= 2 * (this.numerator);
+              this.denominator += 2 * this.denominator;
           }
 
-          int num= gCd(numerator,denominator);
-          numerator=numerator/num;
-          denominator= denominator/num;
+          int num= gCd(this.numerator,this.denominator);
+          this.numerator=this.numerator/num;
+          this.denominator= this.denominator/num;
       }
 
     public int getDenominator() {
@@ -37,10 +37,11 @@ public class Fraction {
     }
 
     public int gCd(int m, int n){
-          int om = numerator;
-          int on = denominator;
 
-          while(om%on != 0) {
+
+          while(m%n != 0) {
+              int om = m;
+              int on = n;
               m = on;
               n = (om%on);
           }
@@ -107,7 +108,7 @@ public class Fraction {
               int nn= numerator%denominator;
 
 
-              return first + nn + "/" + denominator;
+              return first +" " + nn + "/" + denominator;
 
 
           }
